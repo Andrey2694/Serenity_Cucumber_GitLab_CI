@@ -21,6 +21,8 @@ public class SearchStepDefinitions {
 
     @Then("he sees the results displayed for {word}")
     public void heSeesTheResultsDisplayedForApple(String fruit) {
+        // The better idea will be creating a POJO class and takes a list of classes,
+        // but for one test it doesn't make sense
         restAssuredThat(response -> response.statusCode(200));
         ArrayList<String> titles = new ArrayList<>(Arrays.asList(then().extract().path("title").toString().split(",")));
         assertThat(titles.stream().allMatch(n -> n.toLowerCase().contains(fruit)))
