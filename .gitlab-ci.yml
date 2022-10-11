@@ -24,7 +24,7 @@ Report:
   dependencies:
     - ApiTests
   script:
-    - echo "Report report link -- https://gitlab.com/AndreyZhmaka/Soft-Industry/-/jobs/${CI_JOB_ID}/artifacts/file/target/site/serenity/index.html"
+    - echo "Report report link -- https://gitlab.com/AndreyZhmaka/Soft-Industry-example/-/jobs/${CI_JOB_ID}/artifacts/file/target/site/serenity/index.html"
   allow_failure: false
   artifacts:
     when: always
